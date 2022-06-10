@@ -6,7 +6,6 @@ const data = [
     { name: "80%", value: 200 },
     { name: "95%", value: 300 },
     { name: "59%", value: 300 },
-    { name: "Group D", value: 200 }
 ];
 
 const renderActiveShape = (props) => {
@@ -18,8 +17,6 @@ const renderActiveShape = (props) => {
         outerRadius,
         fill,
         payload,
-        percent,
-        value
     } = props;
     const sin = Math.sin(-RADIAN * midAngle);
     const cos = Math.cos(-RADIAN * midAngle);
@@ -50,15 +47,15 @@ export default function CircleChart() {
     );
 
     return (
-        <PieChart width={200} height={250}>
+        <PieChart width={150} height={250}>
             <Pie
                 activeIndex={activeIndex}
                 activeShape={renderActiveShape}
                 data={data}
-                cx={100}
-                cy={150}
+                cx={70}
+                cy={90}
                 innerRadius={50}
-                outerRadius={60}
+                outerRadius={55}
                 fill="#64FFDA"
                 dataKey="value"
                 onMouseEnter={onPieEnter}

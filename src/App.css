@@ -40,6 +40,10 @@
   font-size: smaller;
 }
 
+.input-style:active {
+  border: 0px solid white;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

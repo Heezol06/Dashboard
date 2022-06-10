@@ -1,0 +1,41 @@
+.for-sm-nav {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .dashboard-sm {
+        display: block;
+        flex-direction: column;
+    }
+
+    .navbar-sm {
+        display: none !important;
+    }
+
+    .for-sm-nav {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+
+
+    }
+
+    .show-in-bottom {
+        display: flex !important;
+
+    }
+
+    .profile-sm {
+        width: 500px;
+        background-color: #F5F5F5;
+    }
+
+    .chart-sm {
+        width: 100%;
+    }
+
+    .bar-chart-sm {
+        width: 300px !important;
+    }
+}
