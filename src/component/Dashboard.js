@@ -8,6 +8,7 @@ import {
     XAxis,
     YAxis,
     CartesianGrid,
+    ResponsiveContainer,
     // Tooltip,
     // Legend
 } from "recharts";
@@ -18,7 +19,52 @@ import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 
 
-// charts file 
+// charts mobile file 
+const dataMobile = [
+    {
+        name: "20",
+        uv: 4000,
+        pv: 2400,
+        amt: 2400
+    },
+    {
+        name: "",
+        uv: 5000,
+        pv: 6000,
+        amt: 7000
+    },
+    {
+        name: "25",
+        uv: 6000,
+        pv: 7000,
+        amt: 8000
+    },
+    {
+        name: "",
+        uv: 7000,
+        pv: 8000,
+        amt: 9000
+    },
+    {
+        name: "30",
+        uv: 8000,
+        pv: 9000,
+        amt: 10000
+    },
+    {
+        name: "",
+        uv: 9000,
+        pv: 10000,
+        amt: 11000
+    },
+    {
+        name: "35",
+        uv: 10000,
+        pv: 11000,
+        amt: 12000
+    }
+];
+// chart desktop 
 const data = [
     {
         name: "20",
@@ -154,18 +200,16 @@ const PrettoSlider = styled(Slider)({
 const Dashboard = () => {
 
     return (
-        <div className='my-5 d-sm-inline-flex flex-md-column '>
+        <div className='my-5 d-sm-inline-flex flex-md-column' style={{ minWidth: "270px" }}>
             {/* dashboard navigation for mobile  */}
-            <div className='for-sm-nav'>
-                <div className='show-in-bottom'>
-                    <Col xs={1} className='d-flex justify-content-between p-0 align-items-end'>
+            <div className='for-sm-nav w-100'>
+                <div className='show-in-bottom w-100'>
+                    <Col xs={1} className='d-flex justify-content-between p-0 align-items-end' style={{ minWidth: "270px" }}>
                         <i class="fa-solid fa-magnifying-glass"></i>
-
                         <i class="fa-solid fa-house"></i>
                         <i class="fa-solid fa-newspaper"></i>
                         <i class="fa-solid fa-table-list"></i>
                         <i class="fa-solid fa-user"></i>
-
                         <i class="fa-solid fa-arrow-right-from-bracket"></i>
                     </Col>
                 </div>
@@ -273,7 +317,8 @@ const Dashboard = () => {
                                 K 73,500
                             </p>
                         </div>
-                        <div className='d-flex justify-content-start'>
+                        {/* desktop chart */}
+                        <div className='d-flex justify-content-start desktop-chart'>
                             <BarChart
                                 className=''
                                 width={600}
@@ -295,6 +340,32 @@ const Dashboard = () => {
                                 <Bar dataKey="uv" stackId="a" fill="#9FA8DA" />
                                 <Bar dataKey="amt" stackId="a" fill="#E8EAF6" />
                             </BarChart>
+                        </div>
+                        {/* mobile chart */}
+                        <div className='d-flex justify-content-start mobile-chart'>
+                            <ResponsiveContainer width="100%" height={400}>
+                                <BarChart
+                                    className=''
+                                    width={600}
+                                    height={300}
+                                    data={dataMobile}
+                                    margin={{
+                                        top: 20,
+                                        right: 30,
+                                        left: 0,
+                                        bottom: 5
+                                    }}
+                                >
+                                    <CartesianGrid strokeDasharray="3 3" />
+                                    <XAxis dataKey="name" />
+                                    <YAxis />
+                                    {/* <Tooltip />
+      <Legend /> */}
+                                    <Bar dataKey="pv" barSize={10} stackId="a" fill="#1A237E" />
+                                    <Bar dataKey="uv" stackId="a" fill="#9FA8DA" />
+                                    <Bar dataKey="amt" stackId="a" fill="#E8EAF6" />
+                                </BarChart>
+                            </ResponsiveContainer>
                         </div>
                     </div>
                     {/* Compare peers  */}
@@ -344,7 +415,7 @@ const Dashboard = () => {
 
 
                 <Col xs={2} className=""  >
-                    <div className='mt-5 rounded p-3' style={{ borderBottom: "1 px solid ", backgroundColor: "#F5F5F5", }}>
+                    <div className='mt-5 rounded p-3' style={{ borderBottom: "1 px solid ", backgroundColor: "#F5F5F5", minWidth: "270px" }}>
                         <h5>Retirement Strategy</h5>
                         <Box sx={{ m: 3 }} />
                         <Typography gutterBottom className='text-start fw-bolder'>Employee Contribution</Typography>
@@ -366,14 +437,14 @@ const Dashboard = () => {
                         <button className='text-white py-3 px-5 rounded' style={{ border: 0, backgroundColor: "#651FFF" }}>Update</button>
                         <p className='color-Deep-Purple small-text mt-5'>View Help Docs <i class="fa-solid fa-angle-right"></i></p>
                     </div>
-                    <div className='mt-5 text-start p-3' style={{ borderLeft: "1px solid #651FFF" }}>
+                    <div className='mt-5 text-start p-3' style={{ borderLeft: "1px solid #651FFF", minWidth: "270px" }}>
                         <h6 className='fw-normal'>Are you considering a <span className='fw-bold'>Housing advance?</span></h6>
                         <p className='color-gray small-text my-1'>Limited time reduced interest</p>
                         <p className='color-Deep-Purple small-text'>View Help Docs <i class="fa-solid fa-angle-right"></i></p>
                     </div>
                 </Col>
             </Row>
-        </div>
+        </div >
     );
 };
 

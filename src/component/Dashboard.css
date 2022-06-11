@@ -2,6 +2,10 @@
     display: none;
 }
 
+.mobile-chart {
+    display: none !important;
+}
+
 @media only screen and (max-width: 768px) {
     .dashboard-sm {
         display: block;
@@ -21,10 +25,10 @@
 
     }
 
-    .show-in-bottom {
+    /* .show-in-bottom {
         display: flex !important;
 
-    }
+    } */
 
     .profile-sm {
         width: 500px;
@@ -37,5 +41,13 @@
 
     .bar-chart-sm {
         width: 300px !important;
+    }
+
+    .desktop-chart {
+        display: none !important;
+    }
+
+    .mobile-chart {
+        display: block !important;
     }
 }
