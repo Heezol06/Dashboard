@@ -200,7 +200,7 @@ const PrettoSlider = styled(Slider)({
 const Dashboard = () => {
 
     return (
-        <div className='my-5 d-sm-inline-flex flex-md-column' style={{ minWidth: "270px" }}>
+        <div className='my-5 d-sm-inline-flex flex-md-column' style={{ minWidth: "270px", backgroundImage: "url(https://i.ibb.co/X8WyXqG/wings.png)" }}>
             {/* dashboard navigation for mobile  */}
             <div className='for-sm-nav w-50'>
                 <div className='show-in-bottom w-50'>
@@ -228,7 +228,7 @@ const Dashboard = () => {
             </div>
             <Row className='py-3 d-flex  container mx-auto rounded dashboard-sm' style={{ backgroundColor: "#FAFAFA", }}>
                 {/* dashboard navigation  */}
-                <Col xs={1} className='d-flex flex-column justify-content-between p-0 navbar-sm' style={{ color: "gray" }}>
+                <Col xs={1} className='d-flex flex-column justify-content-between p-0 navbar-sm' style={{ color: "gray", width: "3%" }}>
                     <div className='d-flex flex-column'>
                         <img src="https://i.ibb.co/X8WyXqG/wings.png" className='w-25 mx-auto mb-4' alt="" />
                         <i class="fa-solid fa-magnifying-glass mb-5"></i>
@@ -393,7 +393,7 @@ const Dashboard = () => {
                     </div>
                     <div className='d-flex pie-chart-mobile'>
                         <div className='col-lg-3'>
-                            <div class="d-flex align-items-center my-3 border-bottom">
+                            <div class="d-flex align-items-center my-3 border-bottom w-75">
                                 <h6>Age:</h6>
                                 <select class="form-select " aria-label="Default select example" style={{ boxShadow: "0px, 0px, 0px, 0px black", border: "none", background: "transparent" }}>
                                     <option selected>Select Age</option>
@@ -402,7 +402,7 @@ const Dashboard = () => {
                                     <option value="3">Under 50</option>
                                 </select>
                             </div>
-                            <div class="d-flex align-items-center my-3 border-bottom">
+                            <div class="d-flex align-items-center my-3 border-bottom w-75">
                                 <h6>Salary:</h6>
                                 <select class="form-select" aria-label="Default select example" style={{ boxShadow: "0px, 0px, 0px, 0px black", border: "none", background: "transparent" }}>
                                     <option selected>Select Salary</option>
@@ -411,7 +411,7 @@ const Dashboard = () => {
                                     <option value="3">40k - 50k</option>
                                 </select>
                             </div>
-                            <div class="d-flex align-items-center border-bottom">
+                            <div class="d-flex align-items-center border-bottom w-75">
                                 <h6>Gender:</h6>
                                 <select class="form-select" aria-label="Default select example" style={{ boxShadow: "0px, 0px, 0px, 0px black", border: "none", background: "transparent" }}>
                                     <option selected>Select Gender</option>
@@ -424,9 +424,7 @@ const Dashboard = () => {
                         {/* pie chart  */}
                         <div >
                             <div className='d-flex  overflow-hidden'>
-                                <CircleChart style={{ width: "100px" }}></CircleChart>
-                                <CircleChart style={{ width: "100px" }}></CircleChart>
-                                <CircleChart style={{ width: "100px" }}></CircleChart>
+                                <CircleChart></CircleChart>
                             </div>
                         </div>
                     </div>

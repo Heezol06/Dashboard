@@ -6,6 +6,9 @@
     display: none !important;
 }
 
+.desktop-nav {
+    width: 3% !important;
+}
 
 @media only screen and (max-width: 768px) {
     .dashboard-sm {
@@ -38,6 +41,8 @@
 
     .chart-sm {
         width: 100%;
+        padding-left: 0 !important;
+        /* padding-right: 0 !important; */
     }
 
     .bar-chart-sm {
@@ -65,11 +70,5 @@
 
     .button-mobile {
         width: 100%;
-    }
-
-    .mobile-chart {
-        /* flex-direction: row !important;
-        margin: 0px !important;
-        width: 300px; */
     }
 }
