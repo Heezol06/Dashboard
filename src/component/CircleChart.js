@@ -1,6 +1,7 @@
 
 import React, { useCallback, useState } from "react";
-import { PieChart, Pie } from "recharts";
+import { PieChart, Pie, ResponsiveContainer } from "recharts";
+import './CircleChart.css'
 
 const data = [
     { name: "80%", value: 200 },
@@ -47,19 +48,42 @@ export default function CircleChart() {
     );
 
     return (
-        <PieChart width={150} height={250}>
-            <Pie
-                activeIndex={activeIndex}
-                activeShape={renderActiveShape}
-                data={data}
-                cx={70}
-                cy={90}
-                innerRadius={50}
-                outerRadius={55}
-                fill="#64FFDA"
-                dataKey="value"
-                onMouseEnter={onPieEnter}
-            />
-        </PieChart>
+        <div>
+            <PieChart width={150} height={150}>
+                {/* desktop-pie-chart  */}
+                <Pie
+                    className="desktop-pie-chart"
+                    activeIndex={activeIndex}
+                    activeShape={renderActiveShape}
+                    data={data}
+                    cx={50}
+                    cy={90}
+                    innerRadius={50}
+                    outerRadius={55}
+                    fill="#64FFDA"
+                    dataKey="value"
+                    onMouseEnter={onPieEnter}
+                />
+            </PieChart>
+            {/* mobile-pie-chart  */}
+
+            <ResponsiveContainer width={'33%'} height={300}>
+                <PieChart>
+                    <Pie
+                        className="mobile-pie-chart"
+                        activeIndex={activeIndex}
+                        activeShape={renderActiveShape}
+                        data={data}
+                        cx={30}
+                        cy={30}
+                        innerRadius={30}
+                        outerRadius={35}
+                        fill="#64FFDA"
+                        dataKey="value"
+                        onMouseEnter={onPieEnter}
+                    />
+                </PieChart>
+            </ResponsiveContainer>
+        </div>
     );
 }

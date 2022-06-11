@@ -202,15 +202,27 @@ const Dashboard = () => {
     return (
         <div className='my-5 d-sm-inline-flex flex-md-column' style={{ minWidth: "270px" }}>
             {/* dashboard navigation for mobile  */}
-            <div className='for-sm-nav w-100'>
-                <div className='show-in-bottom w-100'>
-                    <Col xs={1} className='d-flex justify-content-between p-0 align-items-end' style={{ minWidth: "270px" }}>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <i class="fa-solid fa-house"></i>
-                        <i class="fa-solid fa-newspaper"></i>
-                        <i class="fa-solid fa-table-list"></i>
-                        <i class="fa-solid fa-user"></i>
-                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            <div className='for-sm-nav w-50'>
+                <div className='show-in-bottom w-50'>
+                    <Col xs={1} className='d-flex justify-content-between p-0 align-items-end mx-auto' style={{ minWidth: "270px" }}>
+                        <button type="button" class="btn btn-primary">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            <i class="fa-solid fa-house"></i>
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            <i class="fa-solid fa-newspaper"></i>
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            <i class="fa-solid fa-table-list"></i>
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            <i class="fa-solid fa-user"></i>
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        </button>
                     </Col>
                 </div>
             </div>
@@ -281,13 +293,13 @@ const Dashboard = () => {
                         <h5>Starting Year 2056</h5>
                     </div>
                     {/* improvement of user  */}
-                    <div className='d-flex my-5 me-5'>
+                    <div className='d-flex my-5 me-5 improvement-mobile'>
                         <Col xs={4} style={{ borderBottom: "1px solid #651FFF" }} className="me-4">
                             <h5>$300,000</h5>
                             <p className='small-text color-gray'>My Goal</p>
                         </Col>
-                        <div className='d-lg-flex '>
-                            <Col xs={4} style={{ borderBottom: "1px solid #651FFF" }} className="mx-4">
+                        <div className='d-flex'>
+                            <Col xs={4} style={{ borderBottom: "1px solid #651FFF" }} className="me-4">
                                 <h5>59%</h5>
                                 <p className='small-text color-gray'>Goal Achieved</p>
                             </Col>
@@ -300,22 +312,28 @@ const Dashboard = () => {
                     {/* Contributions overtime chart */}
                     <div className='my-5 d-flex flex-column'>
                         <h6>Contributions Overtime</h6>
-                        <div className='d-flex w-100'>
-                            <p className='fw-bold'>
-                                <div style={{ background: "#1A237E", width: "2px" }}></div>
+                        <div className='d-flex w-100 justify-content-between'>
+                            <div className='fw-bold d-flex align-items-center contribution-mobile'>
+                                <div style={{ background: "#1A237E", width: "15px", height: "10px" }} className="me-2 rounded"></div>
                                 <span className='color-gray'>Employer:</span>
-                                K 73,500
-                            </p>
-                            <p className='fw-bold'>
-                                <div style={{ background: "#1A237E", width: "2px" }}></div>
+                                <span>
+                                    K 57,500
+                                </span>
+                            </div>
+                            <div className='fw-bold d-flex align-items-center contribution-mobile'>
+                                <div style={{ background: "#9FA8DA", width: "15px", height: "10px" }} className="me-2 rounded"></div>
                                 <span className='color-gray'>Employer:</span>
-                                K 73,500
-                            </p>
-                            <p className='fw-bold'>
-                                <div style={{ background: "#1A237E", width: "2px" }}></div>
+                                <span>
+                                    K 94,500
+                                </span>
+                            </div>
+                            <div className='fw-bold d-flex align-items-center contribution-mobile'>
+                                <div style={{ background: "#E8EAF6", width: "15px", height: "10px" }} className="me-2 rounded"></div>
                                 <span className='color-gray'>Employer:</span>
-                                K 73,500
-                            </p>
+                                <span>
+                                    K 73,500
+                                </span>
+                            </div>
                         </div>
                         {/* desktop chart */}
                         <div className='d-flex justify-content-start desktop-chart'>
@@ -373,7 +391,7 @@ const Dashboard = () => {
                         <h6>How do i compare to my peers?</h6>
                         <p className='small-text color-gray'>These numbers represent current goal achievement</p>
                     </div>
-                    <div className='d-flex'>
+                    <div className='d-flex pie-chart-mobile'>
                         <div className='col-lg-3'>
                             <div class="d-flex align-items-center my-3 border-bottom">
                                 <h6>Age:</h6>
@@ -404,16 +422,15 @@ const Dashboard = () => {
                             </div>
                         </div>
                         {/* pie chart  */}
-                        <div className='d-flex col-lg-6'>
-                            <CircleChart></CircleChart>
-                            <CircleChart></CircleChart>
-                            <CircleChart></CircleChart>
+                        <div >
+                            <div className='d-flex  overflow-hidden'>
+                                <CircleChart style={{ width: "100px" }}></CircleChart>
+                                <CircleChart style={{ width: "100px" }}></CircleChart>
+                                <CircleChart style={{ width: "100px" }}></CircleChart>
+                            </div>
                         </div>
                     </div>
                 </Col>
-
-
-
                 <Col xs={2} className=""  >
                     <div className='mt-5 rounded p-3' style={{ borderBottom: "1 px solid ", backgroundColor: "#F5F5F5", minWidth: "270px" }}>
                         <h5>Retirement Strategy</h5>
@@ -434,7 +451,7 @@ const Dashboard = () => {
                         <div className='' style={{ borderBottom: "1px solid lightGray" }}></div>
                         <div className='small-text fw-bold  d-flex justify-content-between mt-5 mb-4'>Employer Contribution 8.4%</div>
                         <div className='small-text fw-bold  d-flex justify-content-between mb-5'><span>Interest Rate</span> <span>5%</span></div>
-                        <button className='text-white py-3 px-5 rounded' style={{ border: 0, backgroundColor: "#651FFF" }}>Update</button>
+                        <button className='text-white py-3 px-5 rounded button-mobile' style={{ border: 0, backgroundColor: "#651FFF" }}>Update</button>
                         <p className='color-Deep-Purple small-text mt-5'>View Help Docs <i class="fa-solid fa-angle-right"></i></p>
                     </div>
                     <div className='mt-5 text-start p-3' style={{ borderLeft: "1px solid #651FFF", minWidth: "270px" }}>

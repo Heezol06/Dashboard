@@ -1,0 +1,17 @@
+.desktop-pie-chart {
+    display: block;
+}
+
+.mobile-pie-chart {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .desktop-pie-chart {
+        display: none;
+    }
+
+    .mobile-pie-chart {
+        display: block;
+    }
+}

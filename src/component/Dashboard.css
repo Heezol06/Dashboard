@@ -6,6 +6,7 @@
     display: none !important;
 }
 
+
 @media only screen and (max-width: 768px) {
     .dashboard-sm {
         display: block;
@@ -25,14 +26,14 @@
 
     }
 
-    /* .show-in-bottom {
-        display: flex !important;
-
-    } */
-
     .profile-sm {
         width: 500px;
         background-color: #F5F5F5;
+    }
+
+    .improvement-mobile {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .chart-sm {
@@ -49,5 +50,26 @@
 
     .mobile-chart {
         display: block !important;
+    }
+
+    .pie-chart-mobile {
+        flex-direction: column;
+        width: 350px;
+        justify-content: space-between;
+    }
+
+    .contribution-mobile {
+        flex-direction: column;
+        align-items: start !important;
+    }
+
+    .button-mobile {
+        width: 100%;
+    }
+
+    .mobile-chart {
+        /* flex-direction: row !important;
+        margin: 0px !important;
+        width: 300px; */
     }
 }
