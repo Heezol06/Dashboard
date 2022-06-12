@@ -200,7 +200,7 @@ const PrettoSlider = styled(Slider)({
 const Dashboard = () => {
 
     return (
-        <div className='my-5 d-sm-inline-flex flex-md-column' style={{ minWidth: "270px", backgroundImage: "url(https://i.ibb.co/X8WyXqG/wings.png)" }}>
+        <div className='my-5 d-sm-inline-flex flex-md-column' style={{ width: "100vw", backgroundColor: "red" }}>
             {/* dashboard navigation for mobile  */}
             <div className='for-sm-nav w-50'>
                 <div className='show-in-bottom w-50'>

@@ -1,4 +1,4 @@
-.CircularProgressbar {
+.mobile-CircularProgressbar {
     width: 100px !important;
     margin: 20px;
     margin-top: 50px;
@@ -9,9 +9,9 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .CircularProgressbar {
+    .mobile-CircularProgressbar {
         margin-top: 100px;
-        width: 70px !important;
+        width: 150px !important;
         position: relative;
         right: 20px !important;
         z-index: 4;
