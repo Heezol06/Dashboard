@@ -393,7 +393,7 @@ const Dashboard = () => {
                     </div>
                     <div className='d-flex pie-chart-mobile'>
                         <div className='col-lg-3'>
-                            <div class="d-flex align-items-center my-3 border-bottom w-75">
+                            <div class="d-flex align-items-center my-3 border-bottom select-option-sizing">
                                 <h6>Age:</h6>
                                 <select class="form-select " aria-label="Default select example" style={{ boxShadow: "0px, 0px, 0px, 0px black", border: "none", background: "transparent" }}>
                                     <option selected>Select Age</option>
@@ -402,7 +402,7 @@ const Dashboard = () => {
                                     <option value="3">Under 50</option>
                                 </select>
                             </div>
-                            <div class="d-flex align-items-center my-3 border-bottom w-75">
+                            <div class="d-flex align-items-center my-3 border-bottom select-option-sizing">
                                 <h6>Salary:</h6>
                                 <select class="form-select" aria-label="Default select example" style={{ boxShadow: "0px, 0px, 0px, 0px black", border: "none", background: "transparent" }}>
                                     <option selected>Select Salary</option>
@@ -411,7 +411,7 @@ const Dashboard = () => {
                                     <option value="3">40k - 50k</option>
                                 </select>
                             </div>
-                            <div class="d-flex align-items-center border-bottom w-75">
+                            <div class="d-flex align-items-center border-bottom select-option-sizing">
                                 <h6>Gender:</h6>
                                 <select class="form-select" aria-label="Default select example" style={{ boxShadow: "0px, 0px, 0px, 0px black", border: "none", background: "transparent" }}>
                                     <option selected>Select Gender</option>
