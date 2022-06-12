@@ -204,7 +204,7 @@ const Dashboard = () => {
             {/* dashboard navigation for mobile  */}
             <div className='for-sm-nav w-50'>
                 <div className='show-in-bottom w-50'>
-                    <Col xs={1} className='d-flex justify-content-between p-0 align-items-end mx-auto justify-content-sm-center' style={{ minWidth: "270px" }}>
+                    <Col xs={1} className='d-flex justify-content-between p-0 align-items-end mx-auto  ' style={{ minWidth: "270px" }}>
                         <button type="button" class="btn btn-primary">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
@@ -226,27 +226,27 @@ const Dashboard = () => {
                     </Col>
                 </div>
             </div>
-            <Row className='py-3 d-flex justify-content-sm-center container mx-auto rounded dashboard-sm' style={{ backgroundColor: "#FAFAFA", }}>
+            <Row className='py-3 d-flex   container mx-auto rounded dashboard-sm' style={{ backgroundColor: "#FAFAFA", }}>
                 {/* dashboard navigation  */}
-                <Col xs={1} className='d-flex justify-content-sm-center flex-column justify-content-between p-0 navbar-sm' style={{ color: "gray", width: "3%" }}>
-                    <div className='d-flex justify-content-sm-center flex-column'>
+                <Col xs={1} className='d-flex   flex-column justify-content-between p-0 navbar-sm' style={{ color: "gray", width: "3%" }}>
+                    <div className='d-flex   flex-column'>
                         <img src="https://i.ibb.co/X8WyXqG/wings.png" className='w-25 mx-auto mb-4' alt="" />
                         <i class="fa-solid fa-magnifying-glass mb-5"></i>
                     </div>
-                    <div className='d-flex justify-content-sm-center flex-column'>
+                    <div className='d-flex   flex-column'>
                         <i class="fa-solid fa-house mb-3"></i>
                         <i class="fa-solid fa-newspaper mb-3"></i>
                         <i class="fa-solid fa-table-list mb-3"></i>
                         <i class="fa-solid fa-user"></i>
                     </div>
-                    <div className='d-flex justify-content-sm-center flex-column'>
+                    <div className='d-flex   flex-column'>
                         <i class="fa-solid fa-bell my-2"></i>
                         <i class="fa-solid fa-arrow-right-from-bracket my-2"></i>
                     </div>
                 </Col>
                 {/* dashboard profile */}
                 <Col xs={2} className='p-5 rounded ' style={{ backgroundColor: "#F5F5F5", width: "305px" }}>
-                    <div className='d-flex justify-content-sm-center mt-3 profile-sm' style={{ width: "100%" }}>
+                    <div className='d-flex   mt-3 profile-sm' style={{ width: "100%" }}>
                         <div className='profile-name-pic'>
                             <img src="https://i.ibb.co/BKPjRLp/photo-1552374196-c4e7ffc6e126.png" className=' rounded-circle ' style={{ width: "60px" }} alt="" />
                         </div>
@@ -293,12 +293,12 @@ const Dashboard = () => {
                         <h5>Starting Year 2056</h5>
                     </div>
                     {/* improvement of user  */}
-                    <div className='d-flex justify-content-sm-center my-5 me-5 improvement-mobile'>
+                    <div className='d-flex   my-5 me-5 improvement-mobile'>
                         <Col xs={4} style={{ borderBottom: "1px solid #651FFF" }} className="me-4">
                             <h5>$300,000</h5>
                             <p className='small-text color-gray'>My Goal</p>
                         </Col>
-                        <div className='d-flex justify-content-sm-center'>
+                        <div className='d-flex  '>
                             <Col xs={4} style={{ borderBottom: "1px solid #651FFF" }} className="me-4">
                                 <h5>59%</h5>
                                 <p className='small-text color-gray'>Goal Achieved</p>
@@ -310,24 +310,24 @@ const Dashboard = () => {
                         </div>
                     </div>
                     {/* Contributions overtime chart */}
-                    <div className='my-5 d-flex justify-content-sm-center flex-column'>
+                    <div className='my-5 d-flex   flex-column'>
                         <h6>Contributions Overtime</h6>
-                        <div className='d-flex justify-content-sm-center w-100 justify-content-between'>
-                            <div className='fw-bold d-flex justify-content-sm-center align-items-center contribution-mobile'>
+                        <div className='d-flex   w-100 justify-content-between'>
+                            <div className='fw-bold d-flex   align-items-center contribution-mobile'>
                                 <div style={{ background: "#1A237E", width: "15px", height: "10px" }} className="me-2 rounded"></div>
                                 <span className='color-gray'>Employer:</span>
                                 <span>
                                     K 57,500
                                 </span>
                             </div>
-                            <div className='fw-bold d-flex justify-content-sm-center align-items-center contribution-mobile'>
+                            <div className='fw-bold d-flex   align-items-center contribution-mobile'>
                                 <div style={{ background: "#9FA8DA", width: "15px", height: "10px" }} className="me-2 rounded"></div>
                                 <span className='color-gray'>Employer:</span>
                                 <span>
                                     K 94,500
                                 </span>
                             </div>
-                            <div className='fw-bold d-flex justify-content-sm-center align-items-center contribution-mobile'>
+                            <div className='fw-bold d-flex   align-items-center contribution-mobile'>
                                 <div style={{ background: "#E8EAF6", width: "15px", height: "10px" }} className="me-2 rounded"></div>
                                 <span className='color-gray'>Employer:</span>
                                 <span>
@@ -336,7 +336,7 @@ const Dashboard = () => {
                             </div>
                         </div>
                         {/* desktop chart */}
-                        <div className='d-flex justify-content-sm-center justify-content-start desktop-chart'>
+                        <div className='d-flex   justify-content-start desktop-chart'>
                             <BarChart
                                 className=''
                                 width={600}
@@ -360,7 +360,7 @@ const Dashboard = () => {
                             </BarChart>
                         </div>
                         {/* mobile chart */}
-                        <div className='d-flex justify-content-sm-center justify-content-start mobile-chart'>
+                        <div className='d-flex   justify-content-start mobile-chart'>
                             <ResponsiveContainer width="100%" height={400}>
                                 <BarChart
                                     className=''
@@ -391,9 +391,9 @@ const Dashboard = () => {
                         <h6>How do i compare to my peers?</h6>
                         <p className='small-text color-gray'>These numbers represent current goal achievement</p>
                     </div>
-                    <div className='d-flex justify-content-sm-center pie-chart-mobile'>
+                    <div className='d-flex   pie-chart-mobile'>
                         <div className='col-lg-3'>
-                            <div class="d-flex justify-content-sm-center align-items-center my-3 border-bottom select-option-sizing">
+                            <div class="d-flex   align-items-center my-3 border-bottom select-option-sizing">
                                 <h6>Age:</h6>
                                 <select class="form-select " aria-label="Default select example" style={{ boxShadow: "0px, 0px, 0px, 0px black", border: "none", background: "transparent" }}>
                                     <option selected>Select Age</option>
@@ -402,7 +402,7 @@ const Dashboard = () => {
                                     <option value="3">Under 50</option>
                                 </select>
                             </div>
-                            <div class="d-flex justify-content-sm-center align-items-center my-3 border-bottom select-option-sizing">
+                            <div class="d-flex   align-items-center my-3 border-bottom select-option-sizing">
                                 <h6>Salary:</h6>
                                 <select class="form-select" aria-label="Default select example" style={{ boxShadow: "0px, 0px, 0px, 0px black", border: "none", background: "transparent" }}>
                                     <option selected>Select Salary</option>
@@ -411,7 +411,7 @@ const Dashboard = () => {
                                     <option value="3">40k - 50k</option>
                                 </select>
                             </div>
-                            <div class="d-flex  justify-content-sm-center align-items-center border-bottom select-option-sizing">
+                            <div class="d-flex    align-items-center border-bottom select-option-sizing">
                                 <h6>Gender:</h6>
                                 <select class="form-select" aria-label="Default select example" style={{ boxShadow: "0px, 0px, 0px, 0px black", border: "none", background: "transparent" }}>
                                     <option selected>Select Gender</option>
@@ -423,7 +423,7 @@ const Dashboard = () => {
                         </div>
                         {/* pie chart  */}
                         <div >
-                            <div className='d-flex justify-content-sm-center overflow-hidden'>
+                            <div className='d-flex   overflow-hidden'>
                                 <CircleChart></CircleChart>
                             </div>
                         </div>
