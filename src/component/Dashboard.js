@@ -200,44 +200,53 @@ const PrettoSlider = styled(Slider)({
 const Dashboard = () => {
 
     return (
-        <div className='my-5 d-sm-inline-flex flex-md-column' style={{ width: "100vw", backgroundColor: "red" }}>
-            {/* dashboard navigation for mobile  */}
-            <div className='for-sm-nav w-50'>
-                <div className='show-in-bottom w-50'>
-                    <Col xs={1} className='d-flex justify-content-between p-0 align-items-end mx-auto  ' style={{ minWidth: "270px" }}>
-                        <button type="button" class="btn btn-primary">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </button>
-                        <button type="button" class="btn btn-primary">
-                            <i class="fa-solid fa-house"></i>
-                        </button>
-                        <button type="button" class="btn btn-primary">
-                            <i class="fa-solid fa-newspaper"></i>
-                        </button>
-                        <button type="button" class="btn btn-primary">
-                            <i class="fa-solid fa-table-list"></i>
-                        </button>
-                        <button type="button" class="btn btn-primary">
-                            <i class="fa-solid fa-user"></i>
-                        </button>
-                        <button type="button" class="btn btn-primary">
-                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
-                        </button>
-                    </Col>
-                </div>
-            </div>
+        <div className='my-5 d-sm-inline-flex flex-md-column shadow-lg rounded'>
             <Row className='py-3 d-flex   container mx-auto rounded dashboard-sm' style={{ backgroundColor: "#FAFAFA", }}>
+                {/* dashboard navigation for mobile  */}
+                <div className='for-sm-nav'>
+                    <div className='show-in-bottom'>
+                        <Col className='d-flex justify-content-between p-0 align-items-end mx-auto col-sm-12 ' style={{}}>
+                            <button type="button" class="btn btn-primary mx-2">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                            <button type="button" class="btn btn-primary mx-2">
+                                <i class="fa-solid fa-house"></i>
+                            </button>
+                            <button type="button" class="btn btn-primary mx-2">
+                                <i class="fa-solid fa-newspaper"></i>
+                            </button>
+                            <button type="button" class="btn btn-primary mx-2">
+                                <i class="fa-solid fa-table-list"></i>
+                            </button>
+                            <button type="button" class="btn btn-primary mx-2">
+                                <i class="fa-solid fa-user"></i>
+                            </button>
+                            <button type="button" class="btn btn-primary mx-2">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            </button>
+                        </Col>
+                    </div>
+                </div>
+
                 {/* dashboard navigation  */}
-                <Col xs={1} className='d-flex   flex-column justify-content-between p-0 navbar-sm' style={{ color: "gray", width: "3%" }}>
+                <Col className='d-flex   flex-column justify-content-between p-0 navbar-sm col-lg-1' style={{ color: "gray", width: "3%" }}>
                     <div className='d-flex   flex-column'>
                         <img src="https://i.ibb.co/X8WyXqG/wings.png" className='w-25 mx-auto mb-4' alt="" />
                         <i class="fa-solid fa-magnifying-glass mb-5"></i>
                     </div>
                     <div className='d-flex   flex-column'>
-                        <i class="fa-solid fa-house mb-3"></i>
-                        <i class="fa-solid fa-newspaper mb-3"></i>
-                        <i class="fa-solid fa-table-list mb-3"></i>
-                        <i class="fa-solid fa-user"></i>
+                        <button type="button" class="btn btn-primary p-1 mt-2 me-1">
+                            <i class="fa-solid fa-house "></i>
+                        </button>
+                        <button type="button" class="btn btn-primary p-1 mt-2 me-1">
+                            <i class="fa-solid fa-newspaper "></i>
+                        </button>
+                        <button type="button" class="btn btn-primary p-1 mt-2 me-1">
+                            <i class="fa-solid fa-table-list "></i>
+                        </button>
+                        <button type="button" class="btn btn-primary p-1 mt-2 me-1">
+                            <i class="fa-solid fa-user"></i>
+                        </button>
                     </div>
                     <div className='d-flex   flex-column'>
                         <i class="fa-solid fa-bell my-2"></i>
@@ -245,8 +254,8 @@ const Dashboard = () => {
                     </div>
                 </Col>
                 {/* dashboard profile */}
-                <Col xs={2} className='p-5 rounded ' style={{ backgroundColor: "#F5F5F5", width: "305px" }}>
-                    <div className='d-flex   mt-3 profile-sm' style={{ width: "100%" }}>
+                <Col className='p-5 rounded col-lg-3 col-sm-12' style={{ backgroundColor: "#F5F5F5" }}>
+                    <div className='d-flex mt-3 profile-sm'>
                         <div className='profile-name-pic'>
                             <img src="https://i.ibb.co/BKPjRLp/photo-1552374196-c4e7ffc6e126.png" className=' rounded-circle ' style={{ width: "60px" }} alt="" />
                         </div>
@@ -286,14 +295,14 @@ const Dashboard = () => {
                 </Col>
 
                 {/* chart's */}
-                <Col xs={6} className="text-start p-5 chart-sm">
+                <Col className="text-start p-5 col-lg-6 col-sm-12">
                     {/* headding  */}
                     <div>
                         <h1 className='color-Deep-Purple small-text'>Retirement Income</h1>
                         <h5>Starting Year 2056</h5>
                     </div>
                     {/* improvement of user  */}
-                    <div className='d-flex   my-5 me-5 improvement-mobile'>
+                    <div className='d-flex my-5 me-5 improvement-mobile'>
                         <Col xs={4} style={{ borderBottom: "1px solid #651FFF" }} className="me-4">
                             <h5>$300,000</h5>
                             <p className='small-text color-gray'>My Goal</p>
@@ -310,7 +319,7 @@ const Dashboard = () => {
                         </div>
                     </div>
                     {/* Contributions overtime chart */}
-                    <div className='my-5 d-flex   flex-column'>
+                    <div className='my-5 d-flex flex-column'>
                         <h6>Contributions Overtime</h6>
                         <div className='d-flex   w-100 justify-content-between'>
                             <div className='fw-bold d-flex   align-items-center contribution-mobile'>
@@ -360,7 +369,7 @@ const Dashboard = () => {
                             </BarChart>
                         </div>
                         {/* mobile chart */}
-                        <div className='d-flex   justify-content-start mobile-chart'>
+                        <div className='d-flex justify-content-start mobile-chart'>
                             <ResponsiveContainer width="100%" height={400}>
                                 <BarChart
                                     className=''
@@ -393,7 +402,7 @@ const Dashboard = () => {
                     </div>
                     <div className='d-flex   pie-chart-mobile'>
                         <div className='col-lg-3'>
-                            <div class="d-flex   align-items-center my-3 border-bottom select-option-sizing">
+                            <div class="d-flex   align-items-center my-3 border-bottom">
                                 <h6>Age:</h6>
                                 <select class="form-select " aria-label="Default select example" style={{ boxShadow: "0px, 0px, 0px, 0px black", border: "none", background: "transparent" }}>
                                     <option selected>Select Age</option>
@@ -402,7 +411,7 @@ const Dashboard = () => {
                                     <option value="3">Under 50</option>
                                 </select>
                             </div>
-                            <div class="d-flex   align-items-center my-3 border-bottom select-option-sizing">
+                            <div class="d-flex align-items-center my-3 border-bottom">
                                 <h6>Salary:</h6>
                                 <select class="form-select" aria-label="Default select example" style={{ boxShadow: "0px, 0px, 0px, 0px black", border: "none", background: "transparent" }}>
                                     <option selected>Select Salary</option>
@@ -411,7 +420,7 @@ const Dashboard = () => {
                                     <option value="3">40k - 50k</option>
                                 </select>
                             </div>
-                            <div class="d-flex    align-items-center border-bottom select-option-sizing">
+                            <div class="d-flex align-items-center border-bottom">
                                 <h6>Gender:</h6>
                                 <select class="form-select" aria-label="Default select example" style={{ boxShadow: "0px, 0px, 0px, 0px black", border: "none", background: "transparent" }}>
                                     <option selected>Select Gender</option>
@@ -423,14 +432,14 @@ const Dashboard = () => {
                         </div>
                         {/* pie chart  */}
                         <div >
-                            <div className='d-flex   overflow-hidden'>
+                            <div className='d-flex overflow-hidden'>
                                 <CircleChart></CircleChart>
                             </div>
                         </div>
                     </div>
                 </Col>
-                <Col xs={2} className="col-sm-12"  >
-                    <div className='mt-5 rounded p-3' style={{ borderBottom: "1 px solid ", backgroundColor: "#F5F5F5", minWidth: "270px" }}>
+                <Col className="col-sm-12 col-lg-2"  >
+                    <div className='mt-5 rounded p-3' style={{ borderBottom: "1 px solid ", backgroundColor: "#F5F5F5", }}>
                         <h5>Retirement Strategy</h5>
                         <Box sx={{ m: 3 }} />
                         <Typography gutterBottom className='text-start fw-bolder'>Employee Contribution</Typography>
@@ -449,10 +458,10 @@ const Dashboard = () => {
                         <div className='' style={{ borderBottom: "1px solid lightGray" }}></div>
                         <div className='small-text fw-bold  d-flex justify-content-between mt-5 mb-4'>Employer Contribution 8.4%</div>
                         <div className='small-text fw-bold  d-flex justify-content-between mb-5'><span>Interest Rate</span> <span>5%</span></div>
-                        <button className='text-white py-3 px-5 rounded button-mobile' style={{ border: 0, backgroundColor: "#651FFF" }}>Update</button>
+                        <button className='text-white py-3 px-5 rounded' style={{ border: 0, backgroundColor: "#651FFF" }}>Update</button>
                         <p className='color-Deep-Purple small-text mt-5'>View Help Docs <i class="fa-solid fa-angle-right"></i></p>
                     </div>
-                    <div className='mt-5 text-start p-3' style={{ borderLeft: "1px solid #651FFF", minWidth: "270px" }}>
+                    <div className='mt-5 text-start p-3' style={{ borderLeft: "1px solid #651FFF" }}>
                         <h6 className='fw-normal'>Are you considering a <span className='fw-bold'>Housing advance?</span></h6>
                         <p className='color-gray small-text my-1'>Limited time reduced interest</p>
                         <p className='color-Deep-Purple small-text'>View Help Docs <i class="fa-solid fa-angle-right"></i></p>
